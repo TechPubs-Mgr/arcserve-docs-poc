@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Arcserve Cloud Cyber Resilient Data Store Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">After you import the immutable snapshots as a read-only data store and detach Arcserve Cyber Resilient Data Store from RPS, the metadata folders (destination or index) created on local path for the cloud data store are not automatically deleted.</li>
+            <br />
+            <li class="listbullet" style="color: #000000;">When you update an already existing cloud account with the new access keys, the policies associated with that cloud account fail to get deployed automatically. As a workaround, manually redeploy the failed policies to ensure they are applied correctly.</li>
+            <br />
+            <li class="listbullet" style="color: #000000;">If you import an Arcserve Cloud Cyber Resilient Data Store to a different organization other than the original organization where the data store was created, then restore from that imported data store fails, and the following 403 error is displayed:</li>
+            <li class="listcontinue"><i>The current user does not have permissions to manage the resource.</i>
+            </li>
+            <br />
+            <li class="listbullet" style="color: #000000;">Failed to create immutable snapshot.</li>
+            <li class="listcontinue" style="color: #000000;"><MadCap:variable name="Variables.sy" style="font-weight: bold;" />
+            </li>
+            <li class="listcontinue" style="color: #000000;">When you perform the Create Immutable Snapshot job, the creation of immutable snapshot fails and the following error message is displayed:</li>
+            <li class="listcontinue" style="color: #000000;"> <b>In the activity log:</b></li>
+            <li class="listcontinue" style="color: #000000;"><i>Failed to create immutable snapshot [&lt;parameter&gt;] for the data store [&lt;parameter&gt;].</i>
+            </li>
+            <li class="listcontinue" style="color: #000000;"><b>In the Cloudobjlock log file:</b>
+            </li>
+            <li class="listcontinue" style="color: #000000;"> <i>operation error S3: PutObjectRetention, failed to get rate limit token, retry quota exceeded, 0 available, 10 requested</i></li>
+            <li class="listcontinue" style="color: #000000;"><b>Solution</b>
+            </li>
+            <p class="bodytext">Please retry after sometime. Alternatively, add the "CloudSnapshotThreads" downword registry keyword and set its value to a lower number. Each CPU core supports up to 20 threads, so the total recommended value is calculated as: Number of CPU cores × 20. Add this keyword in the following registry path:</p>
+            <p class="bodytext"><i>HKEY_LOCAL_MACHINE\SOFTWARE\Arcserve\Unified Data Protection\Engine\DataStore\&lt;datastore display name&gt;\GDD</i>
+            </p>
+        </ul>
+    </body>
+</html>

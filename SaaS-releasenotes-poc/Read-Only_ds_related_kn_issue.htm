@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Read-Only Data Store Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">When a valid port number is not provided, the <i>Import Immutable Snapshot for Restore</i> job as a Read-only data store fails with the following incorrect error message:</li>
+            <li class="listcontinue" style="color: #000000;"><i>Failed to get ownership of the data store. Please check if it is a valid data store.</i>
+            </li>
+            <br />
+            <li class="listbullet" style="color: #000000;">Ad-hoc restore jobs fail with read-only data stores (RODS).</li>
+            <li class="listcontinue" style="color: #000000;"><MadCap:variable name="Variables.sy" style="font-weight: bold;" />
+            </li>
+            <li class="listcontinue" style="color: #000000;">When the target data store is configured as read-only, all ad-hoc restore jobs consistently fail due to a disconnection or communication issue with the Arcserve Cyber Resilient Storage device. Additionally, the start and stop data store jobs also do not work.</li>
+            <li class="listcontinue" style="color: #000000;"><b>Solution</b>
+            </li>
+            <p class="bodytext">Check the connectivity with the Arcserve Cyber Resilient Storage device and then start the data store.</p>
+            <br />
+            <li class="listbullet" style="color: #000000;">Restore jobs fail or hang due to the accidental deletion or expiry of access keys.</li>
+            <li class="listcontinue" style="color: #000000;"><MadCap:variable name="Variables.sy" style="font-weight: bold;" />
+            </li>
+            <li class="listcontinue" style="color: #000000;">When access keys associated with a read-only data store (RODS) are accidentally deleted or expired, any subsequent restore jobs attempting to access that data store may fail or hang. This occurs because the system can no longer authenticate and authorize access to the underlying storage.</li>
+            <li class="listcontinue" style="color: #000000;"><b>Solution</b>
+            </li>
+            <p class="bodytext">As a workaround, detach and reattach the read-only data store using the new access keys.</p>
+        </ul>
+    </body>
+</html>

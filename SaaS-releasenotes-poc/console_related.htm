@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Console Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">Deleting a mounted SQL database using SQL Server Management Studio does not unmount the database.</li>
+            <li class="listcontinue" style="color: #000000;"><MadCap:variable name="Variables.sy" style="font-weight: bold;" />
+            </li>
+            <li class="listcontinue" style="color: #000000;">If you mount a SQL database and then delete it using SQL Server Management Studio (SSMS), the database is not unmounted and continues to appear as a mounted recovery point under <b>Protect</b> &gt; <b>Disaster Recovery</b> &gt; <b>Mounted Recovery Points</b>, with the Unmount option still available.</li>
+            <li class="listcontinue" style="color: #000000;"><b>Solution</b>
+            </li>
+            <p class="bodytext">As a workaround, manually unmount the deleted database.</p>
+            <p class="bodytext"><b>To unmount, follow these steps:</b>
+            </p>
+            <ol>
+                <li class="listnumber">Navigate to <b>Protect</b> &gt; <b>Disaster Recovery</b> &gt; <b>Mounted Recovery Points</b>.</li>
+                <li class="listnumber">From the <b>Action</b> drop-down list, click <b>Unmount</b>.</li>
+                <li class="listcontinue">The confirmation dialog appears asking whether you want to unmount the recovery point.</li>
+                <li class="listnumber"> Click <b>OK</b> to confirm.</li>
+            </ol>
+        </ul>
+    </body>
+</html>

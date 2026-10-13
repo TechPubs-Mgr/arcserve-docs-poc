@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="  http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Metadata Synchronization Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">Synchronization of data store metadata failed.</li>
+            <li class="listcontinue" style="color: #000000;"><b><MadCap:variable name="Variables.sy" />:</b>
+            </li>
+            <li class="listcontinue" style="color: #000000;">Arcserve UDP data store appears in Restore Only (Degraded State)/Abnormal Restore Only status whenever metadata synchronization may fail for multiple reasons, such as intermittent connections to the cloud, failed file uploads to the cloud, or issues with taking the VSS snapshot.</li>
+            <li class="listcontinue" style="color: #000000;">For more information about the error, refer to the GDD server index role log in: <i>C:\Program Files\Arcserve\Unified Data Protection\Engine\Logs</i></li>
+            <li class="listcontinue" style="color: #000000;"><b><MadCap:variable name="Variables.so" /></b>
+            </li>
+            <li class="listcontinue" style="color: #000000;">The next metadata sync, which runs every 15 minutes, should resolve the issue. Alternatively, a manual metadata sync can be triggered using the as_gddmgr.exe tool located in the following path:</li>
+            <li class="listcontinue" style="color: #000000;font-style: italic;">C:\Program Files\Arcserve\Unified Data Protection\Engine\BIN</li>
+        </ul>
+    </body>
+</html>

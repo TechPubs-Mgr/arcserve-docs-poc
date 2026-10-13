@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Enhancements (January, 2026)</h1>
+        <p class="bodytext">This release provides the following enhancements:</p>
+        <ul>
+            <li class="listbullet">
+                <b>Updated Email Alert Behavior for Arcserve Cloud Storage (ACS) and Arcserve Cloud Cyber Resilient Storage (ACCRS):</b> This enhancement updates how and when the system sends  email alerts for ACS and ACCRS. Instead of sending daily notifications, the system now consolidates alerts into a weekly schedule every Tuesday. It also adjusts alert frequency for storage consumption and license expiry milestones, ensuring you receive timely but less repetitive notifications.  </li>
+            <li class="listcontinue">
+                <b>Note:</b> These updates do not affect in-app console alerts.</li>
+            <ul>
+                <li class="listbullet2">
+                    <b>General Alert Frequency</b>
+                </li>
+                <li class="listcontinue">The system now sends email alerts weekly instead of daily. It delivers alerts every Tuesday.</li>
+                <li class="listbullet2">
+                    <b>Storage Consumption (license usage)</b>
+                </li>
+                <ul>
+                    <li class="listbullet2">At 80% consumption, the system sends a one-time email alert.</li>
+                    <li class="listbullet2">At 100%, 105% or higher storage consumption, the system sends weekly email alerts every Tuesday.</li>
+                </ul>
+                <li class="listbullet2">
+                    <b>License Expiry Alerts</b> </li>
+                <li class="listcontinue">The system sends one-time email alerts at the following milestones:</li>
+                <ul>
+                    <li class="listbullet">Expiry -60 days</li>
+                    <li class="listbullet">Expiry -30 days</li>
+                    <li class="listbullet">Expiry -7 days</li>
+                    <li class="listbullet">Expiry day</li>
+                    <li class="listbullet">Expiry +30 days</li>
+                </ul>
+                <li class="listbullet2">Starting at Expiry +1 day and continuing from Expiry +31 days onward, the system sends weekly email alerts every Tuesday.</li>
+            </ul>
+            <li class="listbullet">
+                <b>Protection Status Display:</b> The system displays the protection status of a source based on the last backup result, connection status, and policy deployment status:</li>
+            <ul>
+                <li class="listbullet2">When the most recent backup fails or is missed, the connection status is offline, or the policy deployment fails, the system displays the protection status as <i>Unprotected</i>.</li>
+                <li class="listbullet2">When the most recent backup succeeds, the connection status is online, or the policy deployment succeeds, the system displays the protection status as <i>Protected</i>.</li>
+            </ul>
+            <li class="listbullet">
+                <b>Arcserve Console - SaaS UI/UX Enhancements:</b> To improve user experience, the following enhancements have been introduced in the Arcserve Console - SaaS UI:</li>
+            <ul>
+                <li class="listbullet2">
+                    <b>First-run Setup through Quick Start Guide:</b> Guides first-time users through login, displaying the Quick Start Guide as a docked panel that stays accessible across all navigation.</li>
+                <li class="listbullet2">
+                    <b>Notification or Message Auto-dismissal:</b> Notifications automatically dismiss after a defined period.</li>
+                <ul>
+                    <li class="listbullet2">Success and informational notifications auto-dismiss after 30 seconds.</li>
+                    <li class="listbullet2">Warning, failure, and error notifications auto-dismiss after 10 minutes.</li>
+                </ul>
+                <li class="listbullet2">
+                    <b>Previous or Next  Navigation in Policy Wizard:</b> Adds Previous and Next controls to all wizard steps, allowing sequential navigation.</li>
+                <li class="listbullet2">
+                    <b>Dashboard Policies Widget:</b> The Dashboard ‘Policies’ widget displays accurate counts and links to Policies with correct filters.</li>
+                <li class="listbullet2">
+                    <b>RPS Deployment Status Icon:</b> Replaces the green arrow with a spinner or circular progress icon during deployment.</li>
+                <li class="listbullet2">
+                    <b>Replace ‘+’ with ‘Add Task’ in Tasks Panel:</b> Replaces the ‘+’ icon with an <i>Add Task</i> button that opens the task creation workflow.</li>
+                <li class="listbullet2">
+                    <b>Show or Hide Password Feature:</b> Adds a Show or Hide toggle to password inputs. Passwords remain hidden by default and are revealed only when toggled.</li>
+            </ul>
+            <li class="listbullet">
+                <b>User Interface Performance Improvements:</b> To improve the user experience, we have reduced the page load times and resolved UI lag issues. These improvements deliver a faster, smoother, and more responsive interface.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Arcserve Cloud Cyber Resilient Data Store Related</h1>
+        <ul>
+            <li class="listbullet">We recommend avoiding the use of volumes larger than 64 TB for the index and destination folders in a Cloud data store. Microsoft's Volume Shadow Copy Service (VSS), which is used for creating snapshots, does not support volumes larger than 64 TB.</li>
+            <li class="listbullet">When an RPS is moved from one console to another, the associated Arcserve Cloud Cyber Resilient Data Store gets detached automatically or does not appear in the available list.</li>
+            <li class="listbullet">Arcserve Console - SaaS for UDP 10.1 supports only Recover VM, File and Folder Restore, Mount Recovery Point, Browse Recovery Point, and BMR from Arcserve Cloud Storage and Arcserve Cloud Cyber Resilient Data Store.</li>
+            <li class="listbullet">	When you switch from <b>Governance</b> to <b>Compliance</b> mode for object retention in the Cloud Storage portal, and then attempt to create a snapshot, the snapshot creation fails.</li>
+            <li class="listcontinue">
+                <b>Note:</b> Arcserve does not recommend directly modifying cloud bucket properties within a cloud storage portal.</li>
+            <li class="listbullet">Object Locking may be enabled even if it appears as disabled in the Cloud Storage portal. When you attempt to create a snapshot after manually enabling Object Locking in the cloud storage portal, the snapshot creation fails.</li>
+            <li class="listcontinue">
+                <b>Note:</b> Arcserve does not recommend directly modifying cloud bucket properties within a cloud storage portal.</li>
+        </ul>
+    </body>
+</html>

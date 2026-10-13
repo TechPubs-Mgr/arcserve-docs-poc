@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">DR Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">After a block-level DRaaS restore, Windows marks disks that were previously configured as Dynamic Disks (Logical Disk Manager, LDM) as Invalid.</li>
+            <li class="listcontinue" style="color: #000000;"><MadCap:variable name="Variables.sy" style="font-weight: bold;" />
+            </li>
+            <li class="listcontinue" style="color: #000000;">After a DRaaS block-level restore, Windows marks disks that were previously configured as Dynamic (LDM) as invalid. This happens due to disk metadata misalignment after restore.</li>
+            <li class="listcontinue" style="color: #000000;">To prevent this, the system automatically converts supported Dynamic disks to Basic disks during the EC2 Prepare Phase. This ensures the restored VM can boot successfully and data remains accessible without user intervention.</li>
+            <li class="listcontinue" style="color: #000000;"><b>Solution</b>
+            </li>
+            <p class="bodytext">No action is required from the user; the DRaaS proxy performs the conversion automatically. This step is required to realign disk structures and make volumes accessible to Windows.</p>
+            <p class="important"> <b>Important!</b>&#160;After the conversion, volume labels may change.
+Verify the updated labels before performing any post-recovery operations, as they may no longer match the original configuration.</p>
+            <p class="bodytext">The following table outlines the supported and unsupported configurations for automatic Dynamic-to-Basic disk conversion during recovery.</p>
+            <table style="border-collapse: collapse;border: 1px solid #010101;" width="50%">
+                <col style="width: 76px;" />
+                <col style="width: 97px;" />
+                <col style="width: 259px;" />
+                <col style="width: 285px;" />
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tableheading">Disk type</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tableheading">Partition style</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tableheading">Volume type</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tableheading">Conversion Support</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Dynamic</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">GPT</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Simple (single partition per volume)</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Yes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Dynamic</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">MBR</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Simple (single partition per volume)</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Yes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Dynamic</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">GPT</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Spanned / Striped / Mirrored</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">No; conversion skipped</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Dynamic</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">MBR</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">More than 4 volumes</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">No; exceeds MBR primary partition limit</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Basic</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Any</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">Any</p>
+                        </td>
+                        <td style="border: 1px solid #010101;font-size: 90%;">
+                            <p class="tablebodytext">No action taken</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ul>
+    </body>
+</html>

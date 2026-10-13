@@ -1,0 +1,82 @@
+/* =============================================
+   Arcserve Documentation - Custom Styles
+   ============================================= */
+
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #005DAA;
+}
+
+/* --- Sidebar background - light grey --- */
+.sidebar-drawer {
+    background-color: #f0f2f4 !important;
+}
+
+.sidebar-container {
+    background-color: #f0f2f4 !important;
+}
+
+/* --- Sidebar brand/title - replaced by Home in conf.py --- */
+.sidebar-brand-text,
+.sidebar-brand {
+    color: #005DAA !important;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* --- Sidebar caption "CONTENTS" - grey --- */
+.sidebar-tree p.caption,
+.sidebar-tree .caption-text {
+    color: #666666 !important;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Sidebar navigation links --- */
+.sidebar-tree .reference {
+    color: #005DAA !important;
+}
+
+/* --- All internal links --- */
+a.reference.internal {
+    color: #005DAA !important;
+}
+
+/* --- Hide inline toctree and CONTENTS on right --- */
+.toctree-wrapper,
+.contents,
+topic.contents {
+    display: none !important;
+}
+
+/* --- Hide Sphinx/Furo footer attribution --- */
+.bottom-of-page {
+    display: none !important;
+}
+
+/* --- Hide view page source button --- */
+.view-this-page {
+    display: none !important;
+}
+
+/* --- Custom Arcserve copyright footer --- */
+body::after {
+    content: "Copyright © 2014-2026, Arcserve LLC. All rights reserved.";
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85em;
+    color: #555;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="Features.Inprogress">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">New Features and Enhancements (July, 2026)</h1>
+        <p class="bodytext">This release primarily provides the following: </p>
+        <p class="heading3"><b>New Features</b>
+        </p>
+        <ul>
+            <li class="listbullet"><b>UDP Quick Start Guide:</b> Arcserve Console - SaaS now includes a UDP Quick Start Guide that allows you to get started faster and more confidently. It provides step&#8209;by&#8209;step instructions for configuring backup policies, adding protected sources, and monitoring job status. This guide also allows you to simplify onboarding and quickly navigate essential workflows without confusion. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Console/SaaS/Available/ENU/olh/default.htm#Arcserve Console - SaaS/udp_qsg.htm?TocPath=Understanding%2520Arcserve%2520Console%2520-%2520SaaS%257C_____8" target="_blank">UDP&#160;Quick Start Guide</a>.</li>
+            <li class="listbullet"><b>ArcGenie (AI Assistant):</b> Arcserve Console - SaaS now includes an integrated AI Assistant (ArcGenie) to help you access information more efficiently while using the product. ArcGenie enables direct interaction with your knowledge base, provides quick replies, and includes clickable citations in every answer for added transparency. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Console/SaaS/Available/ENU/olh/default.htm#Arcserve Console - SaaS/AI_Chatbot.htm?TocPath=Understanding%2520Arcserve%2520Console%2520-%2520SaaS%257CAsk%2520ArcGenie%253A%2520AI-Powered%2520Assistance%2520in%2520Arcserve%2520Console%2520-%2520SaaS%257C_____0" target="_blank">Ask ArcGenie: AI-Powered Assistance in Arcserve Console - SaaS</a>.</li>
+            <li class="listbullet"><b>Proxmox:</b> This release introduces support for Proxmox Virtual Environment (PVE) in the Arcserve Console -Saas. Proxmox is an open-source enterprise virtualization platform that combines the KVM hypervisor, Linux Containers (LXC), software-defined storage, and advanced networking in a single solution. With this integration, you can protect Proxmox virtual machines directly from the Arcserve Console -Saas. The web-based interface provides centralized visibility and control to simplify backup management and strengthen disaster recovery operations. </li>
+            <li class="listcontinue">This release includes the following capabilities:</li>
+            <ul>
+                <li class="listbullet2">Backup of Proxmox-hosted virtual machines that run Arcserve Console -SaaS supported Windows operating systems and Linux distributions.</li>
+                <li class="listbullet2">Restore virtual machines to the original location or an alternate location for migration, and disaster recovery scenarios.</li>
+                <li class="listbullet2">Restore files and folders by mounting a recovery point, enabling granular recovery without restoring the entire virtual machine.</li>
+            </ul>
+            <li class="listbullet"><b>Disaster Recovery (DR) Runbooks:</b> DR Runbooks are structured, predefined group of sources with recovery configurations that automatically recover to a designated AWS account as Amazon EC2 instances during a disaster event.  Additionally, these books define recovery targets and execution parameters, enabling you to trigger failover quickly and consistently during outages. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Console/SaaS/Available/ENU/olh/default.htm#Arcserve Console - SaaS/dr_runbook.htm?TocPath=Understanding%2520Arcserve%2520UDP%257CProtect%257CDisaster%2520Recovery%257CDR%2520Runbooks%257C_____0" target="_blank">DR Runbooks</a>. </li>
+            <li class="listbullet"><b>UDP and CRS License Management:</b> This release introduces a new licensing management feature for Arcserve UDP and CRS. The feature enables centralized management of license entitlements, real-time visibility into license consumption, and automated alerts for capacity utilization and entitlement expiration. It helps administrators efficiently monitor license usage, plan renewals, and ensure continuous service availability. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Console/SaaS/Available/ENU/olh/default.htm#Arcserve Console - SaaS/acc_dc_config_entitlements.htm?TocPath=Understanding%2520Arcserve%2520UDP%257CSettings%257CConfiguring%2520Entitlements%257C_____0" target="_blank">Configuring Entitlements</a>.</li>
+        </ul>
+        <p class="heading3"><b>Enhancements</b>
+        </p>
+        <ul>
+            <li class="listbullet"><b>Assured Security Enhancements</b>
+            </li>
+            <ul>
+                <li class="listbullet2"><b>Incremental Scan Support:</b> UDP 11.0 now performs Assured Security Incremental Scans. Instead of rescanning the entire recovery point, it scans only new or changed files since the last scan. Activity log clearly shows whether each scan job ran a Full or an Incremental Scan.</li>
+                <li class="listbullet2"><b>ReFS Support:</b> Assured Security now scans ReFS file systems in addition to NTFS. It supports ReFS versions 3.1, 3.4, and 3.7 for both Full and Incremental Scans.</li>
+            </ul>
+            <li class="listcontinue"><b>Notes:</b>
+            </li>
+            <ul>
+                <li class="listbullet">Current scans cannot detect renamed or moved files because their creation or modification timestamps do not change. This enhancement is planned for the future.</li>
+                <li class="listbullet">Each scan job generates an antivirus scan result in the activity log.</li>
+            </ul>
+        </ul>
+    </body>
+</html>

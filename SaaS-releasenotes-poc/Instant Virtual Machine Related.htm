@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1 class="heading1">Instant Virtual Machine Related</h1>
+        <ul>
+            <li class="listbullet" style="color: #000000;">The VM Location page may fail to load available resources after changing the selected hypervisor while creating an Instant Virtual Machine (IVM).</li>
+            <p class="listcontinue" style="font-weight: bold;"><MadCap:variable name="Variables.sy" />
+            </p>
+            <p class="listcontinue">While creating an Instant Virtual Machine (IVM), the VM Location page may fail to load available resources after changing the selected hypervisor and display the following error message:</p>
+            <p class="listcontinue"><i>Select an available ESX Server, Cluster, Resource Pool, or vApp as the VM Location.</i>
+            </p>
+            <p class="listcontinue" style="font-weight: bold;"><MadCap:variable name="Variables.so" />
+            </p>
+            <p class="listcontinue">As a workaround, perform one of the following actions: </p>
+            <ul>
+                <li class="listbullet2">Switch between the hypervisors in the Hypervisor drop-down list and then reselect the target ESX hypervisor.</li>
+                <li class="listbullet2">Restart the IVM wizard and retry the operation from Step 1 (Select a Recovery Point page).</li>
+            </ul>
+            <br />
+            <li class="listbullet" style="color: #000000;">The InstantVMagent.exe file crashed or the InstantVM job failed, and the following error occurs: </li>
+            <li class="listcontinue" style="color: #000000;"><i>[NFC ERROR]NfcAioRcvErrorMsg: Error from server: NfcAioProcessSrvOpIoCallback: An IO operation failed</i>
+            </li>
+            <p class="listcontinue" style="font-weight: bold;"><MadCap:variable name="Variables.sy" />
+            </p>
+            <p class="listcontinue">On the ESX, when the NFS volume count is reached to maximum, the InstantVM job may fail or the InstantVMagent.exe file may crash.</p>
+            <p class="listcontinue" style="font-weight: bold;"><MadCap:variable name="Variables.so" />
+            </p>
+            <p class="listcontinue">As a workaround, do the following: </p>
+            <ol>
+                <li class="listnumber">To edit the advanced configuration option, select the ESXi/ESX host in the Inventory Panel.</li>
+                <li class="listnumber">To launch the Settings window, go to <b>Configuration</b> &gt; <b>Software</b> &gt; <b>Advanced Settings</b>.</li>
+                <li class="listcontinue">The screen displays options to set the volume counts from Default to Maximum.</li>
+                <li class="listnumber">For NFS, select <b>NFS.MaxVolumes:</b> Limits the number of NFS datastores that can be mounted by the vSphere ESXi/ESX host concurrently.</li>
+                <li class="listcontinue"><b>Note:</b> For ESXi 6.7, the default value is 8. For ESXi 7.0, the default value is 32; however, you can increase to a maximum value especially for the ESXi/ESX versions.</li>
+            </ol>
+        </ul>
+    </body>
+</html>

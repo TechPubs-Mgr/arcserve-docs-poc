@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="Features.Inprogress">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">New Features and Enhancements (November, 2025)</h1>
+        <p class="bodytext">This release primarily provides the following: </p>
+        <p class="heading3"><b>New Features</b>
+        </p>
+        <ul>
+            <li class="listbullet"><b>Assured Security - AI Anomaly Detection:</b> This feature uses artificial intelligence to analyze data and identify records that deviate from normal behavior patterns.  It examines  backup recovery points and detects unusual activities, such as file system changes that may signal ransomware activity. The ransomware activity may include suspicious file names, encryption patterns, mass deletions, renames, and so on. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Console/SaaS/Available/ENU/olh/default.htm#Arcserve Console - SaaS/add_as_AI_anomaly_detection_task.htm?TocPath=Understanding%2520Arcserve%2520UDP%257CProtect%257CPolicies%257CHow%2520to%2520Add%2520an%2520Agent-Based%2520Windows%2520Backup%2520Policy%257CAdd%2520an%2520Assured%2520Security%2520-%2520AI%2520Anomaly%2520Detection%2520Task%2520to%2520a%2520Policy%257C_____0" target="_blank">Add an Assured Security - AI Anomaly Detection Task to a Policy</a>.</li>
+            <li class="listbullet"><b>Arcserve Cyber Resilient Storage:</b> Arcserve Cyber Resilient Storage now supports the following features:</li>
+            <ul>
+                <li class="listbullet2"><b>Data Store Migration Support:</b> You can migrate data stores from OneXafe storage to Arcserve Cyber Resilient Storage. This helps you move data easily and manage storage more efficiently.</li>
+                <li class="listbullet2"><b>Jumbo Frames Support:</b> Arcserve Cyber Resilient Storage supports Jumbo Frames to improve network performance during large data transfers. Larger Ethernet frames reduce protocol overhead and the number of packets, which lowers CPU usage, reduces network congestion, and increases throughput. These improvements make replication, backup, and recovery faster and more reliable. They also strengthen cyber resilience by improving synchronization and reducing delay during data validation and integrity checks.</li>
+                <li class="listbullet2"><b>Extended RAID Parity Support:</b> Arcserve Cyber Resilient Storage supports multiple parities in RAIDZ for better data protection and fault tolerance. Administrators can now define double or triple parity options for their pools to ensure higher reliability than in RAIDZ1. This works well for large storage pools or critical environments where drive failures are more likely.</li>
+                <li class="listbullet2"><b>Hot Spare Disk Support:</b> Arcserve Cyber Resilient Storage supports hot spare disks. When a drive fails, the system automatically rebuilds data on the designated hot spare without manual action or downtime. This feature increases system reliability, prevents data loss, and reduces maintenance effort.</li>
+            </ul>
+            <li class="listbullet"><b>License Enforcement:</b>  The License Enforcement feature ensures compliance with capacity-based entitlements for  Arcserve Cloud Storage (ACS) and Arcserve Cloud Cyber Resilient Storage (ACCRS). This mechanism is designed to monitor and regulate product usage, based on two independent metrics: <b>storage capacity</b> and <b>license validity</b>. You must renew or expand your license when the capacity or time limit is reached.</li>
+            <ul>
+                <li class="listbullet2"><b>Storage Capacity:</b> If the storage capacity is fully used, you must purchase additional capacity even when the license is active.</li>
+                <li class="listbullet2"><b>License Validity (Time Limit):</b> If the license expires, you must renew the license.</li>
+            </ul>
+            <li class="listcontinue">When the license limit is exceeded, the system restricts actions such as creating new backups, using key features, or accessing cloud resources until you restore compliance. This helps maintain proper license usage and prevents unauthorized or excessive use of licensed resources. For more information, see <a href="https://documentation.arcserve.com/Arcserve-Licensing/Available/ENU/HTML/LIC/Default.htm#LicensingGuide/sub_storage_exp_cloud_console.htm?TocPath=Using%2520Arcserve%2520License%2520for%2520Arcserve%2520UDP%257CSubscription%2520and%2520Storage%2520Expiry%2520Behavior%257CSubscription%2520and%2520Storage%2520Expiry%2520Behavior%2520in%2520Cloud%2520Console%257C_____0" target="_blank">Subscription and Storage Expiry Behavior in Arcserve Console - SaaS</a>.</li>
+        </ul>
+        <p class="heading3"><b>Enhancements</b>
+        </p>
+        <ul>
+            <li class="listbullet"><b>Assured Security - Malware Scan:</b> Assured Security Scan has been renamed as Assured Security - Malware Scan.</li>
+            <li class="listbullet"><b>Additional NIC Support for Arcserve Cyber Resilient Storage:</b> Arcserve Cyber Resilient Storage now supports additional network interface cards (NICs), providing more flexibility for network and hardware configurations.</li>
+        </ul>
+        <ul>
+            <li class="listbullet" MadCap:conditions="NewSet.ScreenOnly"><b>Assured Security Enhancements</b>
+            </li>
+            <ul>
+                <li class="listbullet2" MadCap:conditions="NewSet.ScreenOnly"><b>Incremental Scan Support:</b> Arcserve Console - SaaS now performs Assured Security Incremental Scans. Instead of rescanning the entire recovery point, it scans only new or changed files since the last scan. The system applies backend criteria to detect added, copied, or modified files and records the results accurately in the activity log. Activity log clearly shows whether each scan job ran a Full or an Incremental Scan.</li>
+                <li class="listbullet2" MadCap:conditions="NewSet.ScreenOnly"><b>ReFS Support:</b> Assured Security now scans ReFS file systems in addition to NTFS. It supports ReFS versions 3.1, 3.4, 3.7, and 3.14 for both Full and Incremental Scans.</li>
+            </ul>
+            <li class="listcontinue" MadCap:conditions="NewSet.ScreenOnly"><b>Notes:</b>
+            </li>
+            <ul>
+                <li class="listbullet" MadCap:conditions="NewSet.ScreenOnly">Current scans cannot detect renamed or moved files because their creation or modification timestamps do not change. This enhancement is planned for the future.</li>
+                <li class="listbullet" MadCap:conditions="NewSet.ScreenOnly">Each scan job generates an antivirus scan result in the activity log.</li>
+            </ul>
+        </ul>
+    </body>
+</html>

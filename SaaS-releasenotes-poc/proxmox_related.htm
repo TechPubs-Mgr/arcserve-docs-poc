@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="forportalmasterpage">
+    <head>
+    </head>
+    <body>
+        <h1 class="heading1">Proxmox Related</h1>
+        <ul>
+            <li class="listbullet">Secondary tasks (Ad-hoc and Scheduled) are not supported.</li>
+            <li class="listbullet">Backup jobs are supported only when the Linux Backup Server (Linux Proxy) resides on the same selected Proxmox server as the source nodes.</li>
+            <li class="listbullet">Elevated users are not supported.</li>
+            <li class="listbullet">Automatic protection of Proxmox virtual machines is not supported.</li>
+            <li class="listbullet">The iSCSI transport mode is not supported for Proxmox Virtual Environment backups.</li>
+            <li class="listbullet">Proxmox VE authentication is not supported.</li>
+            <li class="listcontinue"><b>Note:</b> Only Linux PAM standard authentication is supported.</li>
+            <li class="listbullet">File restore to the original or an alternate location is not supported.</li>
+            <li class="listbullet">Recovering a virtual machine (VM) to a different cluster or to a different Proxmox server within a cluster without shared storage is not supported.</li>
+            <li class="listbullet">Bare Metal Recovery (BMR) is not supported.</li>
+            <li class="listbullet">ReFS volume restore is not supported.</li>
+            <li class="listbullet">Backup of Proxmox LXC containers is not supported.</li>
+            <li class="listbullet">Backup of Proxmox VM templates is not supported. Only standard virtual machines can be backed up.</li>
+            <li class="listbullet">Local Disk and NFS  destinations are not supported.</li>
+            <li class="listbullet">Specifying a network for backup or restore is not supported.</li>
+            <li class="listbullet">When you recover a VM to an alternate location, the <i>Resource Pool</i> drop-down list displays available resource pools. However, the restored VM is not added to the selected resource pool because this functionality is not currently supported.</li>
+            <li class="listbullet">Proxmox agentless nodes must be protected using a dedicated plan. Mixing Proxmox agentless VMs with non&#8209;Proxmox agentless nodes such as VMware, Hyper&#8209;V, or Nutanix within the same plan is not supported. </li>
+            <li class="listbullet">When a Proxmox agentless node is imported, the node name displays only the hostname or IP address. If the virtual machine (VM) is powered off or the QEMU Guest Agent is not installed, the node name is displayed in the  <b>VM (&lt;VM_Name&gt;)</b> format.</li>
+        </ul>
+    </body>
+</html>
